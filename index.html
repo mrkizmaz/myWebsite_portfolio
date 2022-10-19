@@ -7,7 +7,6 @@
     <title>ERSEL KIZMAZ</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="default.css">
@@ -29,7 +28,7 @@
                     </div>
 
                     <ul id="navigation">
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
 
                 </div>
@@ -104,17 +103,73 @@
         </div>
     </section>
 
-
     <section class="s1">
         <div class="main-container">
-            Portfolio
+            <h3 style="text-align: center;"> Some of my past projects</h3>
+            
+            <div class="post-wrapper">
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="images/a.jpg">
+                        <div class="post-preview">
+                            <h6 class="post-title">Post Title</h6>
+                            <p class="post-intro">This is a sentence. Some more text - 1</p>
+                            <a href="post.html">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="images/b.jpg">
+                        <div class="post-preview">
+                            <h6 class="post-title">Post Title</h6>
+                            <p class="post-intro">This is a sentence. Some more text 
+                                asdadasdasdas
+                                This is a sentence. Some more text - 2 
+                            </p>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="images/c.jpg">
+                        <div class="post-preview">
+                            <h6 class="post-title">Post Title</h6>
+                            <p class="post-intro">This is a sentence. Some more text - 3</p>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
 
         </div>
     </section>
 
     <section class="s2">
         <div class="main-container">
-            Contact
+            <h3 style="text-align: center;">Get In Touch</h3>
+
+            <form id="contact-form">
+                <a name="contact"></a>
+                <label>Name</label>
+                <input class="input-field" type="text" name="name">
+
+                <label>Subject</label>
+                <input class="input-field" type="text" name="subject">
+
+                <label>Email</label>
+                <input class="input-field" type="text" name="email">
+
+                <label>Message</label>
+                <textarea class="input-field" name="message"></textarea>
+
+
+                <input id="submit-btn" type="Submit" value="Send">
+            </form>
 
         </div>
     </section>

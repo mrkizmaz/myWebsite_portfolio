@@ -2,7 +2,7 @@
     --mainColor: #eaeaea;
     --secondaryColor: #fff;
 
-    --bordorColor: #c1c1c1;
+    --borderColor: #c1c1c1;
 
     --mainText: black;
     --secondaryText: #4b5156;
@@ -13,7 +13,10 @@
 
     --previewShadow: #F0EAD6;
 
-    --buttonColor: black;
+    --buttonColor: #173fb8;
+
+    /* 173fb8 */
+
 }
 
 html, body {
@@ -57,13 +60,13 @@ h6 { font-size: 16px;}
 
 .s1 {
     background-color: var(--mainColor);
-    border-bottom: 3px solid var(--bordorColor);
+    border-bottom: 3px solid var(--borderColor);
     overflow: auto;
 }
 
 .s2 {
     background-color: var(--secondaryColor);
-    border-bottom: 3px solid var(--bordorColor);
+    border-bottom: 3px solid var(--borderColor);
     overflow: auto;
 }
 
@@ -81,7 +84,7 @@ h6 { font-size: 16px;}
 
 .intro-wrapper {
     background-color: var(--secondaryColor);
-    border: 1px solid var(--bordorColor);
+    border: 1px solid var(--borderColor);
     border-radius: 5px 5px 0 0;
 
     -webkit-box-shadow: 10px 10px 23px 3px rgba(0,0,0,0.75);
@@ -98,7 +101,7 @@ h6 { font-size: 16px;}
 
 .nav-wrapper {
     grid-area: nav-wrapper;
-    border-bottom: 2px solid var(--bordorColor);
+    border-bottom: 2px solid var(--borderColor);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,7 +163,7 @@ h6 { font-size: 16px;}
     height: 180px;
     width: 200px;
     object-fit: cover;
-    border: 2px solid var(--bordorColor);
+    border: 2px solid var(--borderColor);
 }
 
 #theme-options-wrapper {
@@ -193,15 +196,15 @@ h6 { font-size: 16px;}
 }
 
 #blue-mode {
-    background-color: #192734;
+    background-color: #0077b6;
 }
 
 #green-mode {
-    background-color: #78866B;
+    background-color: #38b000;
 }
 
 #purple-mode {
-    background-color: #7E4C74;
+    background-color: #382a3f;
 }
 
 #settings-note {
@@ -231,7 +234,7 @@ h6 { font-size: 16px;}
 #preview {
     width: 280px;
     height: 140px;
-    border: 1.5px solid #17a2b8;
+    border: 1.5px solid var(--borderColor);
     background-color: var(--previewBg);
     padding: 15px;
     position: relative;
@@ -241,7 +244,7 @@ h6 { font-size: 16px;}
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    border: 1.5px solid #17a2b8;
+    border: 1.5px solid var(--borderColor);
     background-color: #fff;
     position: absolute;
 }
@@ -327,7 +330,6 @@ h6 { font-size: 16px;}
     font-weight: 600;
     margin: 2px;
     text-align: left;
-    color: var(--mainText);
 }
  
 .skill:before {
@@ -336,7 +338,7 @@ h6 { font-size: 16px;}
     content: "";
     display: block;
     position: absolute;
-    background-color: var(--previewShadow);
+    background-color: var(--mainColor);
     bottom: 0;
     border-radius: 10px;
 }
@@ -344,7 +346,7 @@ h6 { font-size: 16px;}
 .skill-bar {
     width: 100%;
     height: 10px;
-    background-color: var(--bordorColor);
+    background-color: var(--borderColor);
     display: block;
     position: relative;
     border-radius: 5px;
@@ -394,14 +396,14 @@ h6 { font-size: 16px;}
 
 .button-wrapper {
     display: block;
-    max-width: 250px;
+    max-width: 260px;
     margin: 0 auto;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     padding-top: 10px;
 }
 
 .button {
-    background-color: #173fb8;
+    background-color: var(--buttonColor);
     border-radius: 5px;
     transition: all 0.5s;
     cursor: pointer;
@@ -453,7 +455,7 @@ h6 { font-size: 16px;}
 }
 
 .post {
-    border: 2px solid var(--bordorColor);
+    border: 2px solid var(--borderColor);
     -webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
     -moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
     box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
@@ -486,7 +488,7 @@ h6 { font-size: 16px;}
     display: block;
     max-width: 600px;
     margin: 0 auto;
-    border: 2px solid var(--bordorColor);
+    border: 2px solid var(--borderColor);
     padding: 15px;
     border-radius: 5px;
     background-color: var(--mainColor);
@@ -498,8 +500,9 @@ h6 { font-size: 16px;}
 }
 
 #contact-form textarea {
-    min-height: 100px;
+    min-height: 80px;
     font-size: 14px;
+    width: 100%;
 }
 
 .input-field {
@@ -508,7 +511,7 @@ h6 { font-size: 16px;}
     padding-bottom: 10px;
     background-color: var(--secondaryColor);
     border-radius: 5px;
-    border: 2px solid var(--bordorColor);
+    border: 2px solid var(--borderColor);
     font-size: 14px;
 }
 
@@ -518,7 +521,11 @@ h6 { font-size: 16px;}
     padding-top: 10px;
     padding-bottom: 10px;
     color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Russo One', sans-serif;
     background-color: var(--buttonColor);
+    border-radius: 5px;
     border: none;
 }
 

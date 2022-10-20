@@ -53,13 +53,13 @@ h6 { font-size: 16px;}
 
 .s1 {
     background-color: var(--mainColor);
-    border-bottom: 2px solid var(--bordorColor);
+    border-bottom: 3px solid var(--bordorColor);
     overflow: auto;
 }
 
 .s2 {
     background-color: var(--secondaryColor);
-    border-bottom: 2px solid var(--bordorColor);
+    border-bottom: 3px solid var(--bordorColor);
     overflow: auto;
 }
 
@@ -86,7 +86,6 @@ h6 { font-size: 16px;}
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 2.2em 22.4em;
     grid-template-areas: 
         'nav-wrapper nav-wrapper'
         'left-column right-column'
@@ -146,16 +145,16 @@ h6 { font-size: 16px;}
 
 .left-column {
     grid-area: left-column;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 10px;
 }
 
 #profile_pic {
     display: block;
     margin: 0 auto;
 
-    height: 170px;
-    width: 180px;
+    height: 180px;
+    width: 200px;
     object-fit: cover;
     border: 2px solid var(--bordorColor);
 }
@@ -213,19 +212,21 @@ h6 { font-size: 16px;}
     align-content: center;
 
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
+    margin-left: 10px;
 }
 
 #preview-shadow {
     background-color: var(--previewShadow);
-    width: 300px;
-    height: 150px;
+    width: 280px;
+    height: 140px;
     padding-left: 30px;
     padding-top: 30px;
 }
 
 #preview {
-    width: 300px;
+    width: 280px;
+    height: 140px;
     border: 1.5px solid #17a2b8;
     background-color: var(--previewBg);
     padding: 15px;
@@ -264,26 +265,180 @@ h6 { font-size: 16px;}
 .about-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    padding-bottom: 50px;
-    padding-top: 40px;
-    gap: 100px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    gap: 40px;
+    margin: 0px 40px 0px 40px ;
 }
 
-#skills {
+.about-me {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.about-me h4, h5, p {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* KEY SKILLS */
+
+#key-skills {
     display: flex;
     justify-content: space-evenly;
     background-color: var(--previewShadow);
+    padding: 15px;
 }
 
-#social_img {
-    width: 100%;
+#key-skills ul {
+    padding: 10px;
+    margin: 0 auto;
 }
 
-.social-links {
-    display: grid;
-    align-content: center;
+/**/
+
+/* SKILL SECTION */
+.skills-wrapper {
+    width: auto;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.skills-wrapper h5 {
     text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+
+.skill {
+    margin-bottom: 15px;
+    position: relative;
+    overflow-x:hidden;
+}
+ 
+.skill > p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a1716;
+    margin: 2px;
+    text-align: left;
+}
+ 
+.skill:before {
+    width: 100%;
+    height: 10px;
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--previewShadow);
+    bottom: 0;
+    border-radius: 10px;
+}
+ 
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--bordorColor);
+    display: block;
+    position: relative;
+    border-radius: 5px;
+}
+ 
+.skill-bar span {
+    position: absolute;
+    border-top: 9px solid var(--secondaryColor);
+    top: -30px;
+    padding: 0;
+    font-size: 13px;
+    padding: 3px 9px;
+    font-weight: 500;
+}
+ 
+.skill-bar {
+    position: relative;
+}
+ 
+.skill1 .skill-count1 {
+    right: 0;
+}
+ 
+.skill1 {
+    width: 95%;
+}
+ 
+.skill2 {
+    width: 85%;
+}
+ 
+.skill2 .skill-count2 {
+    right: 0;
+}
+ 
+.skill3 {
+   width: 75%;
+}
+ 
+.skill3 .skill-count3 {
+    right: 0;
+}
+
+/* skill end */
+
+/* PDF BUTTON */
+
+.button-wrapper {
+    display: block;
+    max-width: 250px;
+    margin: 0 auto;
+    margin-bottom: 14px;
+    padding-top: 10px;
+}
+
+.button {
+    background-color: #173fb8;
+    border-radius: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+  }
+  
+.button span {
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+    font-weight: 10;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+.button:hover span {
+    padding-right: 25px;
+  }
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+/* BUTTON END */
+
 
 .post-wrapper {
     display: grid;
@@ -385,5 +540,3 @@ h6 { font-size: 16px;}
     }
  
 }
-
-

@@ -163,6 +163,7 @@ h6 { font-size: 16px;}
     height: 180px;
     width: 200px;
     object-fit: cover;
+    border-radius: 15px;
     border: 2px solid var(--borderColor);
 }
 
@@ -464,7 +465,7 @@ h6 { font-size: 16px;}
 .thumbnail {
     display: block;
     width: 100%;
-    height: 100px;
+    height: 180px;
     object-fit: cover;
 }
 
@@ -482,6 +483,10 @@ h6 { font-size: 16px;}
 .post-intro {
     columns: #4B5156;
     font-size: 14px;
+}
+
+.post-preview p {
+    color: #343a40;
 }
 
 #contact-form {
@@ -529,9 +534,38 @@ h6 { font-size: 16px;}
     border: none;
 }
 
+.footerCol {
+    padding: 0 0 30px 0;
+    text-align: center;
+  }
+
+  .socialCol {
+    margin: 5px;
+  }
+
+  .socialCol li {
+    display: inline-block;
+    padding-right: 10px;
+  }
+
+.socialCol img {
+    width: 30px;
+    height: 30px;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+.copyrightCol {
+    padding: 5px 0 0 0;
+    font-size: 14px;
+  }
+  
+.copyrightCol p {
+    margin: 0;
+  }
 
 @media screen and (max-width: 1200px) {
-    .main-container{
+    .main-container {
         width: 95%;
     }
 }

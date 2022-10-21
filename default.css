@@ -4,6 +4,8 @@
 
     --borderColor: #adb5bd;
 
+    /*#adb5bd;*/
+
     --mainText: black;
     --secondaryText: #4b5156;
 
@@ -15,13 +17,14 @@
 
     --buttonColor: #173fb8;
 
-    /* 173fb8 */
-
 }
+
+/* ----------- GENERAL PART ----------- */
 
 html, body {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body *{
@@ -33,6 +36,14 @@ h1, h2, h3, h4, h5, h6, strong {
     font-family: 'Russo One', sans-serif;
     font-weight: 500;
 
+    text-shadow:
+    0px 2px 0px #b2a98f,
+    0px 4px 3px rgba(0,0,0,0.15),
+    0px 4px 1px rgba(0,0,0,0.1);
+}
+
+ul {
+    list-style: none;
 }
 
 p, li, span, label, input, textarea {
@@ -42,17 +53,14 @@ p, li, span, label, input, textarea {
 
 a {
     text-decoration: none;
+    font-weight: 900;
     color: #17a2b8;
 }
 
-ul {
-    list-style: none;
-}
-
-h1 { font-size: 44px;}
-h2 { font-size: 36px;}
-h3 { font-size: 28px;}
-h4 { font-size: 24px;}
+h1 { font-size: 42px;}
+h2 { font-size: 34px;}
+h3 { font-size: 26px;}
+h4 { font-size: 22px;}
 h5 { font-size: 20px;}
 h6 { font-size: 16px;}
 
@@ -61,7 +69,7 @@ h6 { font-size: 16px;}
 .s1 {
     background-color: var(--mainColor);
     border-bottom: 2px solid var(--borderColor);
-    overflow: auto;
+    overflow: hidden;
 }
 
 .s2 {
@@ -69,6 +77,35 @@ h6 { font-size: 16px;}
     border-bottom: 2px solid var(--borderColor);
     overflow: auto;
 }
+
+/* --- TEXT WRAPPER --- */
+
+.wrapper {
+    height: 0vh;
+    background: #fff;
+    display: grid;
+    place-items: center;
+  }
+  
+.portrait {
+    padding: 0 6px 0 6px;
+    text-align: justify;
+    font-family: 'Russo One', sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--secondaryColor);
+
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+/* ----------- MAIN PART ----------- */
 
 .main-container {
     width: 1022px;
@@ -80,12 +117,13 @@ h6 { font-size: 16px;}
     text-align: center;
     align-content: center;
     min-height: 6em;
+    margin: -15px 0 -15px 0;
 }
 
 .intro-wrapper {
     background-color: var(--secondaryColor);
-    border: 1px solid var(--borderColor);
-    border-radius: 5px 5px 0 0;
+    border: 3px var(--borderColor);
+    border-radius: 5px;
 
     -webkit-box-shadow: 10px 10px 23px 3px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 23px 3px rgba(0,0,0,0.75);
@@ -167,6 +205,14 @@ h6 { font-size: 16px;}
     border: 2px solid var(--borderColor);
 }
 
+.left-column p {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 600;
+
+}
+
 #theme-options-wrapper {
     display: flex;
     justify-content: center;
@@ -210,6 +256,7 @@ h6 { font-size: 16px;}
 
 #settings-note {
     font-size: 12px;
+    font-weight: 400;
     font-style: italic;
     text-align: center;
 }
@@ -270,13 +317,15 @@ h6 { font-size: 16px;}
     left: -5px;
 }
 
+/* ----------- ABOUT PART ----------- */
+
 .about-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     padding-bottom: 20px;
     padding-top: 20px;
     gap: 40px;
-    margin: 0px 40px 0px 40px ;
+    margin: 0px 20px 0px 20px ;
 }
 
 .about-me {
@@ -290,7 +339,7 @@ h6 { font-size: 16px;}
     margin-bottom: 15px;
 }
 
-/* KEY SKILLS */
+/* --- SKILLS SECTION --- */
 
 #key-skills {
     display: flex;
@@ -304,9 +353,6 @@ h6 { font-size: 16px;}
     margin: 0 auto;
 }
 
-/**/
-
-/* SKILL SECTION */
 .skills-wrapper {
     width: auto;
     font-family: 'Roboto', sans-serif;
@@ -357,10 +403,11 @@ h6 { font-size: 16px;}
     position: absolute;
     border-top: 9px solid var(--secondaryColor);
     top: -30px;
-    padding: 0;
+    padding: 3px 4px;
     font-size: 13px;
-    padding: 3px 9px;
     font-weight: 500;
+
+    margin-left: 100px;
 }
  
 .skill-bar {
@@ -372,11 +419,11 @@ h6 { font-size: 16px;}
 }
  
 .skill1 {
-    width: 95%;
+    width: 85%;
 }
  
 .skill2 {
-    width: 85%;
+    width: 80%;
 }
  
 .skill2 .skill-count2 {
@@ -384,16 +431,54 @@ h6 { font-size: 16px;}
 }
  
 .skill3 {
-   width: 75%;
+   width: 70%;
 }
  
 .skill3 .skill-count3 {
     right: 0;
 }
 
-/* skill end */
+.skill4 {
+    width: 65%;
+ }
+  
+.skill4 .skill-count4 {
+     right: 0;
+ }
 
-/* PDF BUTTON */
+.skill5 {
+    width: 60%;
+ }
+  
+.skill5 .skill-count5 {
+     right: 0;
+ }
+
+.skill6 {
+    width: 55%;
+ }
+  
+.skill6 .skill-count6 {
+     right: 0;
+ }
+
+.skill7 {
+    width: 50%;
+ }
+  
+.skill7 .skill-count7 {
+     right: 0;
+ }
+
+.skill8 {
+    width: 45%;
+ }
+  
+.skill8 .skill-count8 {
+     right: 0;
+ }
+
+/* --- PDF BUTTON SECTION --- */
 
 .button-wrapper {
     display: block;
@@ -444,15 +529,14 @@ h6 { font-size: 16px;}
     right: 0;
   }
 
-/* BUTTON END */
-
+/* ----------- POST PART ----------- */
 
 .post-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, 320px);
     gap: 20px;
     justify-content: center;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 .post {
@@ -465,7 +549,7 @@ h6 { font-size: 16px;}
 .thumbnail {
     display: block;
     width: 100%;
-    height: 180px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -477,6 +561,7 @@ h6 { font-size: 16px;}
 .post-title {
     color: black;
     margin: 0;
+    text-align: center;
 
 }
 
@@ -488,6 +573,8 @@ h6 { font-size: 16px;}
 .post-preview p {
     color: #343a40;
 }
+
+/* ----------- CONTACT PART ----------- */
 
 #contact-form {
     display: block;
@@ -533,6 +620,8 @@ h6 { font-size: 16px;}
     border-radius: 5px;
     border: none;
 }
+
+/* --- SOCIAL LINKS SECTION --- */
 
 .footerCol {
     padding: 0 0 30px 0;
